@@ -44,6 +44,41 @@
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jsp-api</artifactId>
 			<version>${tomcat.version}</version>
+		</dependency><!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.indra.daoderby</groupId>
+			<artifactId>dao-derby-maven</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>C:\Users\user.user-PC\.m2\repository\com\indra\daoderby\dao-derby-maven\0.0.1-SNAPSHOT\dao-derby-maven-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbyclient</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derbynet -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbynet</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -57,6 +92,28 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>2.0.0</version>
+				<configuration>
+					<assembleDirectory>target</assembleDirectory>
+					<programs>
+						<program>
+						<mainClass>com.indra.webjsp.Main</mainClass>
+						<name>webapp</name>
+						</program>
+					</programs>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

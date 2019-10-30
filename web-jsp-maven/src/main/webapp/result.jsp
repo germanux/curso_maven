@@ -18,7 +18,7 @@
         
         
         <c:catch var="loginException">
-            <jsp:useBean id="userLogged" type="sinensia.modelo.User" 
+            <jsp:useBean id="userLogged" type="com.indra.daoderby.modelo.User" 
                          scope="session">
                 <jsp:getProperty property="*" name="userLogged"/>
             </jsp:useBean>
@@ -29,7 +29,7 @@
         </c:if>
         
         <c:catch var="exception">
-            <jsp:useBean id="user" type="sinensia.modelo.User" 
+            <jsp:useBean id="user" type="com.indra.daoderby.modelo.User" 
                          scope="request">
                 <jsp:getProperty property="*" name="user"/>
             </jsp:useBean>
