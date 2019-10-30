@@ -13,6 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -27,19 +29,21 @@
 			<artifactId>derby</artifactId>
 			<version>10.14.1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbyclient</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derbynet -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbynet</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>								
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-compiler-plugin</artifactId> <version>3.2</version> <configuration> 
+		<source>1.8</source> <target>1.8</target> </configuration> </plugin> </plugins> 
+		</build> -->
 </project>
